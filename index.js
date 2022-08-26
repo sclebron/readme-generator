@@ -37,7 +37,7 @@ inquirer.prompt([
     {
         type: 'list',
         message: 'Please choose your license',
-        choices: ['Apache', 'GNU GPLv2', 'GNU GPLv3', 'ISC', 'MIT',],
+        choices: ['Apache', 'BSD', 'GNU GPL v3', 'MIT', 'none of the above',],
         name: 'license',
     },
     {
