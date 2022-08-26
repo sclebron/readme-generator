@@ -6,33 +6,49 @@ const generateMarkdown = require('./utils/generateMarkdown');
 inquirer.prompt([
     {
         type: 'input',
-        message: 'What is the title of your project?',
+        message: 'Please enter the title of your project',
         name: 'title',
     },
     {
         type: 'input',
-        message: 'What is the description?',
+        message: 'Please enter the description?',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'What are installation instructions?',
+        message: 'Please enter the installation instructions?',
         name: 'installation',
     },
     {
         type: 'input',
-        message: 'What is the usage information?',
+        message: 'Please enter the usage information?',
         name: 'usage',
     },
     {
         type: 'input',
-        message: 'What are contribution guidelines?',
-        name: 'contributing',
+        message: 'Please enter the contribution guidelines?',
+        name: 'contributions',
     },
     {
         type: 'input',
-        message: 'What are the test instructions?',
+        message: 'Please enter the test instructions?',
         name: 'tests',
+    },
+    {
+        type: 'list',
+        message: 'Please choose your license',
+        choices: ['Apache', 'GNU GPLv2', 'GNU GPLv3', 'ISC', 'MIT',],
+        name: 'license',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your GitHub url',
+        name: 'git',
+    }, 
+    {
+        type: 'input',
+        message: 'Please enter your email address',
+        name: 'email',
     }
 ])
 
