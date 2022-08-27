@@ -28,7 +28,7 @@ const promptQuestions = [
         },
         {
             type: 'input',
-            message: 'Please enter the contribution guidelines?',
+            message: 'Who contributed to this project?',
             name: 'contributions',
         },
         {
@@ -44,7 +44,7 @@ const promptQuestions = [
         },
         {
             type: 'input',
-            message: 'Please enter your GitHub url',
+            message: 'Please enter your GitHub username',
             name: 'git',
         }, 
         {
@@ -62,8 +62,11 @@ function writeToFile(fileName, data) {
 
 // // // TODO: Create a function to initialize app
 function init() {
-	
-};
+	inquirer.prompt(promptQuestions).then((response) => {
+        console.log('Creating README');
+        const markdown = generateMarkdown(response);
+    });
+}
 
 // // // Function call to initialize app
 init();
