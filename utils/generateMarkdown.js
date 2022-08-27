@@ -17,10 +17,10 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   const links = {
-    'Apache': 
-    'BSD': 
-    'GNU GPL v3': 
-    'MIT': 
+    'Apache': 'https://opensource.org/licenses/Apache-2.0',
+    'BSD': 'https://opensource.org/licenses/BSD-3-Clause',
+    'GNU GPL v3': 'https://www.gnu.org/licenses/gpl-3.0',
+    'MIT': 'https://opensource.org/licenses/MIT'
   }
   if (license === 'none of the above') {
     return ''
