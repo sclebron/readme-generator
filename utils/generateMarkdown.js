@@ -1,39 +1,53 @@
+const badgeArr = [{
+  licenseName: 'Apache',
+  licenseBadge: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+},
+{
+  licenseName: 'BSD',
+  licenseBadge: '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+},
+{
+  licenseName: 'GNU GPL v3',
+  licenseBadge: '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)'
+},
+{
+  licenseName: 'MIT',
+  licenseBadge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+},
+{
+  licenseName: 'none of the above',
+  licenseBadge: 'none of the above'
+}
+]
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === 'none of the above') {
+  if (license === 'none') {
     return ''
-  };
-  const badges = {
-    'Apache': 'https://img.shields.io/badge/License-Apache_2.0-blue.svg',
-    'BSD': 'https://img.shields.io/badge/License-BSD_3--Clause-blue.svg',
-    'GNU GPL v3': 'https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0',
-    'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT'
-  };
-  return badges[license];
+}
+let result = badgeArr.find(n => n.licenseName === license);
+const { licenseBadge } = result
+return licenseBadge
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license === 'none of the above') {
-    return ''
-  } 
-  const links = {
-    'Apache': 'https://opensource.org/licenses/Apache-2.0',
-    'BSD': 'https://opensource.org/licenses/BSD-3-Clause',
-    'GNU GPL v3': 'https://www.gnu.org/licenses/gpl-3.0',
-    'MIT': 'https://opensource.org/licenses/MIT'
-  };
-  return links[license];
-}
+// function renderLicenseLink(license) {
+
+// }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === 'none of the above') {
-    return ''
-  };
+  if (license === 'none') {
+      let section = ``
+      return section
+  }
+
+  let result = badgeArr.find(n => n.licenseName === license);
+  const { licenseName } = result
+  let section = `This is licensed under the ${licenseName} license`
+  return section
 }
 
 // TODO: Create a function to generate markdown for README

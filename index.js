@@ -40,7 +40,7 @@ const promptQuestions = [
         {
             type: 'list',
             message: 'Please choose your license',
-            choices: ['Apache', 'BSD', 'GNU GPL v3', 'MIT', 'none of the above',],
+            choices: ['Apache', 'BSD', 'GNU GPL v3', 'MIT', 'none',],
             name: 'license',
         },
         {
