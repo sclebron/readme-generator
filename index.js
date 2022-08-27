@@ -3,9 +3,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const { mainModule } = require('process');
+const { Http2ServerRequest } = require('http2');
 // TODO: Create an array of questions for user input
 const promptQuestions = [
-    inquirer.prompt([
+    
         {
             type: 'input',
             message: 'Please enter the title of your project',
@@ -52,20 +53,17 @@ const promptQuestions = [
             message: 'Please enter your email address',
             name: 'email',
         }
-    ])
 ];
-
 // // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
 }
 
 // // // TODO: Create a function to initialize app
-function init() {
-	inquirer.prompt(promptQuestions).then((response) => {
-        console.log('Creating README');
-        const markdown = generateMarkdown(response);
-    });
+async function init() {
+    let answers = await inquirer.prompt(promptQuestions);
+    let data = generateMarkdown(answers);
+    writeToFile('README.md',data);
 }
 
 // // // Function call to initialize app
