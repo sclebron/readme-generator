@@ -1,8 +1,8 @@
 
-  xygk
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  title
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  cgh
+  description
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -12,15 +12,15 @@
   - [License](#license)
   - [Questions](#questions)
   ## Installation
-  cgh
+  install
   ## Usage
-  cgh
+  usage
   ## Contributions
-  cgh
+  sophie lebron
   ## Tests
-  cghj
+  test
   ## License
-  This is licensed under the Apache license
+  This is licensed under the MIT license
   ## Questions
-		If you have any questions about the repo, open an issue or contact me directly at <vgh>.
-		You can find more of my work on my GitHub(https://github.com/cgh).
+		If you have any questions about the repo, open an issue or contact me directly at <sophieclebron@gmail.com>.
+		You can find more of my work on my GitHub(https://github.com/sclebron).
