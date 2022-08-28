@@ -2,4 +2,6 @@ I created a command line application that will generate a README.md file with th
 
 https://github.com/sclebron/readme-generator
 
+<img width="1003" alt="Screen Shot 2022-08-27 at 7 03 08 PM" src="https://user-images.githubusercontent.com/109631700/187053475-3430fa88-c544-457b-b2a8-dfc889c030cd.png">
+
 
